@@ -32,15 +32,18 @@ function changeLi(food) {
 
 changeLi(); */
 
-const DOMselectors2 = {
-  button: document.querySelector(`#btn2`),
+const DOMselectors = {
+  button: document.querySelector(`#btn`),
   box: document.querySelector(`#container-box`),
   input: document.querySelector(`#input`),
 };
-const cat = `meow`;
-DOMselectors2.box.insertAdjacentHTML(`beforebegin`, `This is an ${cat}`);
-DOMselectors2.button.addEventListener(`click`, function () {
-  let input = DOMselectors2.input.value;
-  DOMselectors2.box.insertAdjacentHTML("beforeend", `<p>${input}</p>`);
-  DOMselectors2.input.value = "";
+
+function createObject() {
+  const input = DOMselectors.input.value;
+  DOMselectors.input.value = `Thakns`;
+}
+DOMselectors.button.addEventListener(`click`, function () {
+  const input = DOMselectors.input.value;
+  DOMselectors.box.insertAdjacentHTML("beforeend", `<p>${input}</p>`);
+  DOMselectors.input.value = "";
 });

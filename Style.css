@@ -27,11 +27,17 @@ body {
 
 #container-box{
     background-color: black;
+    display: flex;
     font-size: 5rem;
     color: cornsilk;
     text-align: center;
+    align-content: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+
 }
 
 .cat-poster{
     width: 10rem;
 }
+
