@@ -34,16 +34,24 @@ changeLi(); */
 
 const DOMselectors = {
   button: document.querySelector(`#btn`),
+  buttonTwo: document.querySelector(`#btn2`),
   box: document.querySelector(`#container-box`),
   input: document.querySelector(`#input`),
+  input2: document.querySelector(`#input2`),
 };
 
-function createObject() {
+/* function createObject() {
   const input = DOMselectors.input.value;
   DOMselectors.input.value = `Thakns`;
-}
+} */
+
 DOMselectors.button.addEventListener(`click`, function () {
   const input = DOMselectors.input.value;
   DOMselectors.box.insertAdjacentHTML("beforeend", `<p>${input}</p>`);
+  DOMselectors.input.value = "";
+});
+DOMselectors.buttonTwo.addEventListener(`click`, function () {
+  const input2 = DOMselectors.input2.value;
+  DOMselectors.box.insertAdjacentHTML("beforeend", `<p>${input2}</p>`);
   DOMselectors.input.value = "";
 });
