@@ -33,25 +33,29 @@ function changeLi(food) {
 changeLi(); */
 
 const DOMselectors = {
-  button: document.querySelector(`#btn`),
-  buttonTwo: document.querySelector(`#btn2`),
   box: document.querySelector(`#container-box`),
+  box2: document.querySelector(`#container-box2`),
+  box3: document.querySelector(`#container-box3`),
+  button: document.querySelector(`#btn`),
+  button2: document.querySelector(`#btn2`),
+  button3: document.querySelector(`#btn3`),
   input: document.querySelector(`#input`),
   input2: document.querySelector(`#input2`),
+  input3: document.querySelector(`#input3`),
 };
-
-/* function createObject() {
-  const input = DOMselectors.input.value;
-  DOMselectors.input.value = `Thakns`;
-} */
 
 DOMselectors.button.addEventListener(`click`, function () {
   const input = DOMselectors.input.value;
   DOMselectors.box.insertAdjacentHTML("beforeend", `<p>${input}</p>`);
   DOMselectors.input.value = "";
 });
-DOMselectors.buttonTwo.addEventListener(`click`, function () {
+DOMselectors.button2.addEventListener(`click`, function () {
   const input2 = DOMselectors.input2.value;
-  DOMselectors.box.insertAdjacentHTML("beforeend", `<p>${input2}</p>`);
-  DOMselectors.input.value = "";
+  DOMselectors.box2.insertAdjacentHTML("beforeend", `<p>${input2}</p>`);
+  DOMselectors.input2.value = "";
+});
+DOMselectors.button3.addEventListener(`click`, function () {
+  const input3 = DOMselectors.input3.value;
+  DOMselectors.box3.insertAdjacentHTML("beforeend", `<p>${input3}</p>`);
+  DOMselectors.input3.value = "";
 });
