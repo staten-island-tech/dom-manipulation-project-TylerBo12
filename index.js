@@ -42,6 +42,8 @@ const DOMselectors = {
   input: document.querySelector(`#input`),
   input2: document.querySelector(`#input2`),
   input3: document.querySelector(`#input3`),
+  information: document.querySelector(`information`),
+  submit: document.querySelector(`submit`),
 };
 
 DOMselectors.button.addEventListener(`click`, function () {
@@ -49,6 +51,7 @@ DOMselectors.button.addEventListener(`click`, function () {
   DOMselectors.box.insertAdjacentHTML("beforeend", `<p>${input}</p>`);
   DOMselectors.input.value = "";
 });
+
 DOMselectors.button2.addEventListener(`click`, function () {
   const input2 = DOMselectors.input2.value;
   DOMselectors.box2.insertAdjacentHTML("beforeend", `<p>${input2}</p>`);
@@ -59,3 +62,7 @@ DOMselectors.button3.addEventListener(`click`, function () {
   DOMselectors.box3.insertAdjacentHTML("beforeend", `<p>${input3}</p>`);
   DOMselectors.input3.value = "";
 });
+
+DOMselectors.information.addEventListener('click', function(e){
+  e.
+})

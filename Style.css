@@ -65,5 +65,9 @@ body {
     flex-wrap: wrap;
     width: 80rem;
     padding: 5rem ;
-
+}
+#submit{
+  font-size: 10rem;
+  display: flex;
+  align-items: center;
 }
