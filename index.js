@@ -33,13 +33,9 @@ function changeLi(food) {
 changeLi(); */
 
 const DOMselectors = {
-  box: document.querySelector(`#container-box`),
-  box2: document.querySelector(`#container-box2`),
   box3: document.querySelector(`#container-box3`),
-  button: document.querySelector(`#btn`),
-  button2: document.querySelector(`#btn2`),
   button3: document.querySelector(`#btn3`),
-  input: document.querySelector(`#input`),
+  input1: document.querySelector(`#input`),
   input2: document.querySelector(`#input2`),
   input3: document.querySelector(`#input3`),
   information: document.querySelector(`#information`),
@@ -47,34 +43,15 @@ const DOMselectors = {
   objectBox: document.querySelector(`.objectBox`),
 };
 
-DOMselectors.button.addEventListener(`click`, function () {
-  const input = DOMselectors.input.value;
-  DOMselectors.box.insertAdjacentHTML("beforeend", `<p>${input}</p>`);
-  DOMselectors.input.value = "";
-  alert(input);
-  return input;
-});
-DOMselectors.button2.addEventListener(`click`, function () {
-  const input2 = DOMselectors.input2.value;
-  DOMselectors.box2.insertAdjacentHTML("beforeend", `<p>${input2}</p>`);
-  DOMselectors.input2.value = "";
-  alert(input2);
-  return input2;
-});
 DOMselectors.button3.addEventListener(`click`, function () {
+  const input1 = DOMselectors.input1.value;
+  const input2 = DOMselectors.input2.value;
   const input3 = DOMselectors.input3.value;
-  DOMselectors.box3.insertAdjacentHTML("beforeend", `<p>${input3}</p>`);
-  DOMselectors.input3.value = "";
-  alert(input3);
-  return input3;
-});
-
-DOMselectors.information.addEventListener("submit", function (e) {
-  e.preventDefault();
-});
-DOMselectors.submit.addEventListener(`click`, function () {
-  DOMselectors.objectBox.insertAdjacentHTML(
-    `beforeend`,
-    `${input}, ${input2}, ${input3}`
+  DOMselectors.box3.insertAdjacentHTML(
+    "beforeend",
+    `<p>${input1} ${input2} ${input3}</p>`
   );
+  DOMselectors.input1.value = "";
+  DOMselectors.input2.value = "";
+  DOMselectors.input3.value = "";
 });
