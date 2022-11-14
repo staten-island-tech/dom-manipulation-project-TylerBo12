@@ -6,24 +6,6 @@ body {
   padding: 0%;
   margin: 0%;
 }
-/* 
-.food {
-  font-size: 5rem;
-}
-
-#btn {
-  font-size: 7rem;
-  border-radius: 1rem;
-  box-shadow: ;
-}
-
-.container {
-  background-color: aquamarine;
-}
-
-.text{
-    font-size: 1rem;
-} */
 
 #container-box{
     background-color: teal;
@@ -70,4 +52,11 @@ body {
   font-size: 10rem;
   display: flex;
   align-items: center;
+  align-content: center;
+}
+
+.objectBox{
+  background-color: lightblue;
+  font-size: 10rem;
+  width: fit-content;
 }

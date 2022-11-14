@@ -42,27 +42,39 @@ const DOMselectors = {
   input: document.querySelector(`#input`),
   input2: document.querySelector(`#input2`),
   input3: document.querySelector(`#input3`),
-  information: document.querySelector(`information`),
-  submit: document.querySelector(`submit`),
+  information: document.querySelector(`#information`),
+  submit: document.querySelector(`#submit`),
+  objectBox: document.querySelector(`.objectBox`),
 };
 
 DOMselectors.button.addEventListener(`click`, function () {
   const input = DOMselectors.input.value;
   DOMselectors.box.insertAdjacentHTML("beforeend", `<p>${input}</p>`);
   DOMselectors.input.value = "";
+  alert(input);
+  return input;
 });
-
 DOMselectors.button2.addEventListener(`click`, function () {
   const input2 = DOMselectors.input2.value;
   DOMselectors.box2.insertAdjacentHTML("beforeend", `<p>${input2}</p>`);
   DOMselectors.input2.value = "";
+  alert(input2);
+  return input2;
 });
 DOMselectors.button3.addEventListener(`click`, function () {
   const input3 = DOMselectors.input3.value;
   DOMselectors.box3.insertAdjacentHTML("beforeend", `<p>${input3}</p>`);
   DOMselectors.input3.value = "";
+  alert(input3);
+  return input3;
 });
 
-DOMselectors.information.addEventListener('click', function(e){
-  e.
-})
+DOMselectors.information.addEventListener("submit", function (e) {
+  e.preventDefault();
+});
+DOMselectors.submit.addEventListener(`click`, function () {
+  DOMselectors.objectBox.insertAdjacentHTML(
+    `beforeend`,
+    `${input}, ${input2}, ${input3}`
+  );
+});
