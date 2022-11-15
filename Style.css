@@ -47,6 +47,7 @@ body {
     flex-wrap: wrap;
     width: 80rem;
     padding: 5rem ;
+    margin-bottom: 1rem;
 }
 #submit{
   font-size: 10rem;
@@ -55,8 +56,16 @@ body {
   align-content: center;
 }
 
-.objectBox{
-  background-color: lightblue;
-  font-size: 10rem;
-  width: 80rem;
+.objectXbox{
+
+  display: flex;
+  font-size: 8rem;
+  width: 50rem;
+  margin: 1rem;
+  flex-direction: column;
+  flex-wrap: wrap;
+  text-align: center;
+  align-content: center;
+  background-color: aquamarine;
+  border: 0.5rem solid cadetblue;
 }
