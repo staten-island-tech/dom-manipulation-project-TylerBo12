@@ -57,12 +57,12 @@ body {
 }
 
 .objectXbox{
-
   display: flex;
   font-size: 8rem;
   width: 50rem;
   margin: 1rem;
   flex-direction: column;
+  text-align: center  ;
   flex-wrap: wrap;
   text-align: center;
   align-content: center;
