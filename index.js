@@ -16,7 +16,7 @@ DOMselectors.button3.addEventListener(`click`, function () {
 
   DOMselectors.objectBox.insertAdjacentHTML(
     "beforeend",
-    `<div class = "objectXbox"><p>${input1}</p> <p><img src=${img}></p> <p>${input2}</p></div>`
+    `<div class = "objectXbox"><p>${input1}</p> <p class="imgView"><img src=${img}></p> <p>${input2}</p></div>`
   );
   DOMselectors.input1.value = "";
   DOMselectors.input2.value = "";

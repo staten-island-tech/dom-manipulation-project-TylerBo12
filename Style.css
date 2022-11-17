@@ -58,8 +58,8 @@ body {
 
 .objectXbox{
   display: flex;
-  font-size: 8rem;
-  width: 50rem;
+  font-size: 10rem;
+  width: 30vw;
   margin: 1rem;
   flex-direction: column;
   text-align: center  ;
@@ -68,4 +68,10 @@ body {
   align-content: center;
   background-color: aquamarine;
   border: 0.5rem solid cadetblue;
+  
 }
+.imgView{
+  
+
+}
+
