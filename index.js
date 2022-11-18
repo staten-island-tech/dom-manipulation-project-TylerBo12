@@ -17,7 +17,7 @@ DOMselectors.button.addEventListener(`click`, function () {
 
   DOMselectors.objectBox.insertAdjacentHTML(
     "beforeend",
-    `<div class = "objectXbox"> <p>${input1}</p> <p><img src= ${img} class="imgView"></p> <p>${input2}</p> <p><button>${DOMselectors.button2}</button></p></div>`
+    `<div class = "objectXbox"> <p>${input1}</p> <p><img src= ${img} class="imgView"></p> <p>${input2}</p> <p><button id="button2">Remove</button></p></div>`
   );
   DOMselectors.input1.value = "";
   DOMselectors.img.value = "";
@@ -25,6 +25,6 @@ DOMselectors.button.addEventListener(`click`, function () {
 });
 DOMselectors.button2.addEventListener(`click`, function removeObject(e) {
   e.preventDefault();
-  objectBox.parentNode.removeChild(objectBox);
+  objectXbox.parentNode.removeChild(objectBox);
   return false;
 });
