@@ -10,31 +10,35 @@ const DOMselectors = {
   objectBox: document.querySelector(`#objectBox`),
 };
 
-DOMselectors.button.addEventListener("click", function () {
-  const input1 = DOMselectors.input1.value;
-  const img = DOMselectors.img.value;
-  const input2 = DOMselectors.input2.value;
-
-  function makeObject() {
-    DOMselectors.objectBox.insertAdjacentHTML(
-      "beforeend",
-      `<div class = "objectXbox"> <p>${input1}</p> <p><img src= ${img} class="imgView"></p> <p>${input2}</p>  <button class="tempBtn">Remove</button></div>`
-    );
-    DOMselectors.input1.value = "";
-    DOMselectors.img.value = "";
-    DOMselectors.input2.value = "";
-  }
-  function erase() {
-    const remove = document.querySelectorAll(".tempBtn");
-    remove.forEach((eachRemove) => {
-      eachRemove.addEventListener("click", (event) => {
-        event.target.parentElement.remove();
-      });
-    });
-  }
+DOMselectors.button.addEventListener("click", function (e) {
+  e.preventDefault();
   makeObject();
   erase();
 });
+
+function makeObject() {
+  const input1 = DOMselectors.input1.value;
+  const img = DOMselectors.img.value;
+  const input2 = DOMselectors.input2.value;
+  //make an object from values
+  DOMselectors.objectBox.insertAdjacentHTML(
+    "beforeend",
+    `<div class = "objectXbox"> <p>${input1}</p> <p><img src= ${img} class="imgView"></p> <p>${input2}</p>  <button class="tempBtn">Remove</button></div>`
+  );
+  //refactor the clear fields into sperate function
+  DOMselectors.input1.value = "";
+  DOMselectors.img.value = "";
+  DOMselectors.input2.value = "";
+}
+
+function erase() {
+  const remove = document.querySelectorAll(".tempBtn");
+  remove.forEach((eachRemove) => {
+    eachRemove.addEventListener("click", (event) => {
+      event.target.parentElement.remove();
+    });
+  });
+}
 
 /* DOMselectors.button2.addEventListener(`click`, function (e) {
   e.preventDefault();
