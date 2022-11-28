@@ -13,6 +13,7 @@ const DOMselectors = {
 DOMselectors.button.addEventListener("click", function (e) {
   e.preventDefault();
   makeObject();
+  clearField();
   erase();
 });
 
@@ -20,12 +21,13 @@ function makeObject() {
   const input1 = DOMselectors.input1.value;
   const img = DOMselectors.img.value;
   const input2 = DOMselectors.input2.value;
-  //make an object from values
   DOMselectors.objectBox.insertAdjacentHTML(
     "beforeend",
     `<div class = "objectXbox"> <p>${input1}</p> <p><img src= ${img} class="imgView"></p> <p>${input2}</p>  <button class="tempBtn">Remove</button></div>`
   );
-  //refactor the clear fields into sperate function
+}
+
+function clearField() {
   DOMselectors.input1.value = "";
   DOMselectors.img.value = "";
   DOMselectors.input2.value = "";
@@ -39,9 +41,3 @@ function erase() {
     });
   });
 }
-
-/* DOMselectors.button2.addEventListener(`click`, function (e) {
-  e.preventDefault();
-  DOMselectors.objectBox.innerHTML = "";
-  console.log("hi");
-}); */
