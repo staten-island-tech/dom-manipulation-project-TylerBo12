@@ -14,7 +14,7 @@ DOMselectors.button.addEventListener("click", function (e) {
   e.preventDefault();
   makeObject();
   clearField();
-  erase();
+  eraseCard();
 });
 
 function makeObject() {
@@ -33,7 +33,7 @@ function clearField() {
   DOMselectors.input2.value = "";
 }
 
-function erase() {
+function eraseCard() {
   const remove = document.querySelectorAll(".tempBtn");
   remove.forEach((eachRemove) => {
     eachRemove.addEventListener("click", (event) => {
